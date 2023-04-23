@@ -1,0 +1,25 @@
+.ligne{
+     display: flex;
+}
+
+button{
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     border: 2px solid blue;
+     margin: 5px;
+     background-color: transparent;
+}
+
+p{
+     margin-top: 18px;
+     font-size: 18px;
+     font-weight: bold;
+}
+
+.result{
+     width: 270px;
+     height: 60px;
+     border: 2px solid blue;
+     margin: 5px;
+}
