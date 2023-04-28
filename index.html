@@ -8,36 +8,37 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="result" id="resultBox">564 + 522 - 458</div>
-     <div class="ligne">
-          <button name="operateur"><p>mod</p></button>
-          <button name="chiffre"><p>&radic;</p></button>
-          <button name="operateur"><p>%</p></button>
-          <button name="operateur"><p>/</p></button>
-     </div>
-     <div class="ligne">
-          <button name="chiffre"><p>7</p></button>
-          <button name="chiffre"><p>8</p></button>
-          <button name="chiffre"><p>9</p></button>
-          <button name="operateur"><p>x</p></button>
-     </div>
-     <div class="ligne">
-          <button name="chiffre"><p>4</p></button>
-          <button name="chiffre"><p>5</p></button>
-          <button name="chiffre"><p>6</p></button>
-          <button name="operateur"><p>-</p></button>
-     </div>
-     <div class="ligne">
-          <button name="chiffre"><p>1</p></button>
-          <button name="chiffre"><p>2</p></button>
-          <button name="chiffre"><p>3</p></button>
-          <button id="addition" name="operateur"><p>+</p></button>
-     </div>
-     <div class="ligne">
-          <button name="chiffre"><p>0</p></button>
-          <button name="chiffre"><p>,</p></button>
-          <button id="delete"><p><ion-icon name="backspace-outline"></ion-icon></p></button>
-          <button name="operateur" id="resultat"><p>=</p></button>
+     <div class="box">
+          <div class="result" id="resultBox">0</div>
+          <div class="ligne">
+               <button id="deleteAll" class="violet"><p>CA</p></button>
+               <button name="chiffre" class="violet"><p>(</p></button>
+               <button name="operateur" class="violet"><p>)</p></button>
+               <button name="operateur" class="violet"><p>/</p></button>
+          </div>
+          <div class="ligne">
+               <button name="chiffre"><p>7</p></button>
+               <button name="chiffre"><p>8</p></button>
+               <button name="chiffre"><p>9</p></button>
+               <button name="operateur" class="violet"><p>*</p></button>
+          </div>
+          <div class="ligne">
+               <button name="chiffre"><p>4</p></button>
+               <button name="chiffre"><p>5</p></button>
+               <button name="chiffre"><p>6</p></button>
+               <button name="operateur" class="violet"><p>-</p></button>
+          </div>
+          <div class="ligne">
+               <button name="chiffre"><p>1</p></button>
+               <button name="chiffre"><p>2</p></button>
+               <button name="chiffre"><p>3</p></button>
+               <button id="addition" name="operateur" class="violet"><p>+</p></button>
+          </div>
+          <div class="ligne">
+               <button name="chiffre" class="zero"><p>0</p></button>
+               <button name="chiffre"><p>,</p></button>
+               <button  id="resultat" class="violet"><p>=</p></button>
+          </div>
      </div>
 
      <script src="app.js"></script>

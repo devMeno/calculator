@@ -1,12 +1,14 @@
+//Création des variables pour poivoir manipuler chaque type de bouton
+
 var bou = document.getElementsByName("chiffre"),
   operator = document.getElementsByName("operateur"),
   container = document.getElementById("resultBox"),
-  result = document.getElementById("resultat");
+  result = document.getElementById("resultat"),
+  deleteAll = document.getElementById("deleteAll");
 
 console.log(operator);
 
-/*var tab = container.innerText.split("");
-console.log(tab);*/
+//Afficher le chiffre cliqué par l'utilisateur
 
 bou.forEach((element) => {
   element.addEventListener("click", function () {
@@ -18,26 +20,32 @@ bou.forEach((element) => {
   });
 });
 
+//Afficher le chiffre cliqué par l'utilisateur
+
 operator.forEach((element) => {
   element.addEventListener("click", function () {
     if (container.innerText != 0) {
-      container.innerText = container.innerText + " " + this.innerText + " ";
+      container.innerText = container.innerText + this.innerText;
     }
   });
 });
 
-function calculerResultat() {
-  let contenu = container.innerText;
-  let princaipalTab = contenu.split(" ");
+//Supprimer tout ce qui est entré à l'aide de la touche "CA"
 
-  princaipalTab.for (let index = 0, index < princaipalTab.length; index++) {
-    if(index%2 == 0){
-      parseFloat(princaipalTab[index]);
-      console.log(parseFloat(princaipalTab[index]))
-    }
-  }
-}
+deleteAll.addEventListener("click", function () {
+  container.innerText = 0;
+});
 
-calculerResultat();
-/*var contenu = container.innerText;
-console.log(contenu.split(" "));*/
+//Afficher le résultat en cliquant sur "=" , si la syntaxe est bonne...sinon alerter l'utilisateur!
+
+result.addEventListener("click", function () {
+  let reponse;
+  reponse = eval(container.innerText);
+  container.innerText = reponse;
+});
+
+//En cas d'erreur , afficher un message
+
+window.addEventListener("error", function () {
+  container.innerText = "Syntax error";
+});
